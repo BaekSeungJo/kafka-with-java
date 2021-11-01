@@ -5,6 +5,8 @@ import org.apache.kafka.common.config.ConfigException;
 import org.apache.kafka.connect.connector.Task;
 import org.apache.kafka.connect.errors.ConnectException;
 import org.apache.kafka.connect.source.SourceConnector;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -19,15 +21,23 @@ import java.util.Map;
  * Description:
  */
 public class SingleFileSourceConnector extends SourceConnector {
+    private Logger logger = LoggerFactory.getLogger(SingleFileSourceConnector.class);
 
     private Map<String, String> configProperties;
 
     @Override
     public void start(Map<String, String> props) {
+        logger.info("start");
+
+        for (String key : props.keySet()) {
+            logger.info("{},{}", key, props.get(key));
+        }
+
         this.configProperties = props;
         try {
             new SingleFileSourceConnectorConfig(props);
         } catch (ConfigException e) {
+            logger.error(e.getMessage(), e);
             throw new ConnectException(e.getMessage(), e);
         }
     }

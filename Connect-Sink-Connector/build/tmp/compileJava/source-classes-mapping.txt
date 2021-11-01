@@ -1,0 +1,6 @@
+com/example/SingleFileSinkTask.java
+ com.example.SingleFileSinkTask
+com/example/SingleFileSinkConnectorConfig.java
+ com.example.SingleFileSinkConnectorConfig
+com/example/SingleFileSinkConnector.java
+ com.example.SingleFileSinkConnector

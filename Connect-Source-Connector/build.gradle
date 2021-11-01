@@ -14,10 +14,13 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
 
     implementation 'org.apache.kafka:connect-api:2.5.0'
+    implementation 'ch.qos.logback:logback-classic:1.2.6'
 }
 
 jar {
     from {
-        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+        configurations.compileClasspath.collect { it.isDirectory() ? it : zipTree(it) }
     }
 }
+
+

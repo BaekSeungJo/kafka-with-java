@@ -19,7 +19,7 @@ public class SingleFileSourceConnectorConfig extends AbstractConfig {
     public static final String DIR_FILE_NAME_DOC = "읽을 파일  경로와 이름";
 
     public static final String TOPIC_NAME = "topic";
-    public static final String TOPIC_DEFAULT_VALUE = "test";
+    public static final String TOPIC_DEFAULT_VALUE = "file-copy";
     public static final String TOPIC_DOC = "보낼 토픽 이름";
 
     public static ConfigDef CONFIG = new ConfigDef()

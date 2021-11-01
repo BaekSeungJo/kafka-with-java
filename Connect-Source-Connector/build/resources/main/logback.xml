@@ -1,0 +1,39 @@
+<!-- https://www.baeldung.com/logback#example 참고 -->
+<configuration debug="true">
+    <property name="LOG_DIR" value="/tmp/logs/application" />
+    <property name="LOG_FILE" value="LogFile" />
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <!--
+            Pattern layout에서 사용하는 conversion - %로 시작
+            %d{HH:mm:ss.SSS} : timestamp 출력
+            [%thread] : 로그를 생성하는 쓰레드 출력
+            %-5level : 5 패딩하여 로그 레벨 출력
+            %logger{36} : 35자리 까지 자른 로거 이름
+            %msg%n : 로그 메시지 및 OS별 개행문자
+            -->
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_DIR}/${LOG_FILE}.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- daily rollover -->
+            <fileNamePattern>${LOG_DIR}/%d{yyyy.MM}/${LOG_FILE}.gz</fileNamePattern>
+            <!-- keep 30 day's worth of history capped at 3GB total size -->
+            <!-- 30일 동안 로그 파일 보관 -->
+            <maxHistory>30</maxHistory>
+            <!-- 전체 용량이 3GB 넘어가면 FIFO 순서로 로그 파일 삭제 -->
+            <totalSizeCap>3GB</totalSizeCap>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%-4relative [%thread] %-5level %logger{35} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="debug">
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="FILE" />
+    </root>
+</configuration>

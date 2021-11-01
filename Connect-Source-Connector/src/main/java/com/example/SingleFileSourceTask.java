@@ -60,6 +60,7 @@ public class SingleFileSourceTask extends SourceTask {
                 position = 0;
             }
         } catch (Exception e) {
+            logger.error(e.getMessage(), e);
             throw new ConnectException(e.getMessage(), e);
         }
     }

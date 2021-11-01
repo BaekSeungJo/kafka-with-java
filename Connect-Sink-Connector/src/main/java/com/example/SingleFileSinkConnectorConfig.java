@@ -15,7 +15,7 @@ import java.util.Map;
 public class SingleFileSinkConnectorConfig extends AbstractConfig {
 
     public static final String DIR_FILE_NAME = "file";
-    public static final String DIR_FILE_NAME_DEFAULT_VALUE = "/tmp/kafka.txt";
+    public static final String DIR_FILE_NAME_DEFAULT_VALUE = "/tmp/kafka_sink.txt";
     public static final String DIR_FILE_NAME_DOC = "저장할 디렉톨리와 파일 이름";
 
     public static ConfigDef CONFIG = new ConfigDef()

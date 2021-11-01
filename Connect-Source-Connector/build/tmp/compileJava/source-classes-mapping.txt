@@ -1,0 +1,6 @@
+com/example/SingleFileSourceConnectorConfig.java
+ com.example.SingleFileSourceConnectorConfig
+com/example/SingleFileSourceConnector.java
+ com.example.SingleFileSourceConnector
+com/example/SingleFileSourceTask.java
+ com.example.SingleFileSourceTask

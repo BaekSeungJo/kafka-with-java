@@ -4,6 +4,9 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/Connect-Sink-Connector" />
     <file type="web" url="file://$PROJECT_DIR$/Connect-Source-Connector" />
+    <file type="web" url="file://$PROJECT_DIR$/Consumer-With-Multi-Consumer-Thread" />
+    <file type="web" url="file://$PROJECT_DIR$/Consumer-With-Multi-Consumer-Thread-By-Partition" />
+    <file type="web" url="file://$PROJECT_DIR$/Consumer-With-Multi-Worker-Thread" />
     <file type="web" url="file://$PROJECT_DIR$/Producer-Consumer" />
     <file type="web" url="file://$PROJECT_DIR$/Streams" />
   </component>
