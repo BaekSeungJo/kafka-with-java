@@ -2,11 +2,16 @@
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/../elasticsearch-kafka-connector" />
     <file type="web" url="file://$PROJECT_DIR$/Connect-Sink-Connector" />
     <file type="web" url="file://$PROJECT_DIR$/Connect-Source-Connector" />
     <file type="web" url="file://$PROJECT_DIR$/Consumer-With-Multi-Consumer-Thread" />
     <file type="web" url="file://$PROJECT_DIR$/Consumer-With-Multi-Consumer-Thread-By-Partition" />
     <file type="web" url="file://$PROJECT_DIR$/Consumer-With-Multi-Worker-Thread" />
+    <file type="web" url="file://$PROJECT_DIR$/elasticsearch-kafka-connector" />
+    <file type="web" url="file://$PROJECT_DIR$/kafka-multi-consumer-thread-hdfs-save" />
+    <file type="web" url="file://$PROJECT_DIR$/kafka-spring-producer-with-rest-controller" />
+    <file type="web" url="file://$PROJECT_DIR$/metric-kafka-streams" />
     <file type="web" url="file://$PROJECT_DIR$/Producer-Consumer" />
     <file type="web" url="file://$PROJECT_DIR$/spring-kafka-batch-listener" />
     <file type="web" url="file://$PROJECT_DIR$/spring-kafka-commit-listener" />
@@ -14,6 +19,7 @@
     <file type="web" url="file://$PROJECT_DIR$/spring-kafka-listener-container" />
     <file type="web" url="file://$PROJECT_DIR$/spring-kafka-producer" />
     <file type="web" url="file://$PROJECT_DIR$/spring-kafka-template-producer" />
+    <file type="web" url="file://$PROJECT_DIR$/spring-multi-consumer-thread-hdfs-save" />
     <file type="web" url="file://$PROJECT_DIR$/Streams" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">

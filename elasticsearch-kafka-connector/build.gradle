@@ -1,0 +1,37 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'org.slf4j:slf4j-simple:1.7.30'
+    implementation 'org.apache.kafka:connect-api:2.5.0'
+    implementation 'org.elasticsearch.client:elasticsearch-rest-high-level-client:7.9.2'
+
+}
+
+test {
+    useJUnitPlatform()
+}
+
+jar {
+    from {
+        // 의존성이 연결된 파일까지 jar 파일 생성시 추가
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+
+    // Entry LICENSE is a duplicate but no duplicate handling strategy has been set.
+    // 라이브러리끼지 동일한 이름의 파일이 추가되어 중복 문제 발하여 문제 발생시
+    // 중복 파일 제거 옵션 추가
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}

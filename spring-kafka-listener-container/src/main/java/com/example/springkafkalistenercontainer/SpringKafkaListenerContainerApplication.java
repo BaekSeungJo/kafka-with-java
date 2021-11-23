@@ -14,6 +14,11 @@ public class SpringKafkaListenerContainerApplication {
         SpringApplication.run(SpringKafkaListenerContainerApplication.class, args);
     }
 
+    /**
+     * Spring에서 제공하는 기본 KafkaListener 사용하지 않고 커스텀 KafkaListener 사용하기 위해 KafkaListenerFactory 사용
+     *
+     * @param data
+     */
     @KafkaListener(topics = "my-test",
             groupId = "test-group",
             containerFactory = "consumerContainerFactory")

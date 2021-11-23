@@ -17,6 +17,12 @@ public class SpringKafkaCommitListenerApplication {
         SpringApplication.run(SpringKafkaCommitListenerApplication.class, args);
     }
 
+    /**
+     * BatchAcknowledgingMessageListener 사용
+     *
+     * @param records
+     * @param ack
+     */
     @KafkaListener(topics = "my-test",
             groupId = "test-group-01")
     public void commitListener(ConsumerRecords<String, String> records, Acknowledgment ack) {
@@ -24,6 +30,12 @@ public class SpringKafkaCommitListenerApplication {
         ack.acknowledge();
     }
 
+    /**
+     * BatchConsumerAwareMessageListener 사용
+     *
+     * @param records
+     * @param consumer
+     */
     @KafkaListener(topics = "my-test",
             groupId = "test-group-02")
     public void consumerCommitListener(ConsumerRecords<String, String> records, Consumer<String, String> consumer) {

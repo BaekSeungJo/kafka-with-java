@@ -5,6 +5,16 @@
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/../elasticsearch-kafka-connector" />
+        <option name="gradleHome" value="/usr/local/Cellar/gradle/7.2/libexec" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/../elasticsearch-kafka-connector" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/Connect-Sink-Connector" />
         <option name="gradleHome" value="/usr/local/Cellar/gradle/7.2/libexec" />
         <option name="gradleJvm" value="11" />
@@ -76,6 +86,46 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/Streams" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/elasticsearch-kafka-connector" />
+        <option name="gradleHome" value="/usr/local/Cellar/gradle/7.2/libexec" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/elasticsearch-kafka-connector" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/kafka-multi-consumer-thread-hdfs-save" />
+        <option name="gradleHome" value="/usr/local/Cellar/gradle/7.2/libexec" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/kafka-multi-consumer-thread-hdfs-save" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/kafka-spring-producer-with-rest-controller" />
+        <option name="gradleHome" value="/usr/local/Cellar/gradle/7.2/libexec" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/kafka-spring-producer-with-rest-controller" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/metric-kafka-streams" />
+        <option name="gradleHome" value="/usr/local/Cellar/gradle/7.2/libexec" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/metric-kafka-streams" />
           </set>
         </option>
       </GradleProjectSettings>

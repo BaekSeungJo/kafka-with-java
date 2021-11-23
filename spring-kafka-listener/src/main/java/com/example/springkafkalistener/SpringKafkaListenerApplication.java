@@ -33,7 +33,7 @@ public class SpringKafkaListenerApplication {
             groupId = "test-group-02",
             properties = {
                     "max.poll.interval.ms:60000",
-                    "auto.offset.reset:ealist"
+                    "auto.offset.reset:earliest"
             })
     public void singleTopicWithPropertiesListener(String messageValue) {
         logger.info(messageValue);
